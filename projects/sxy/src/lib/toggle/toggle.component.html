@@ -1,0 +1,6 @@
+<div class="toggle">
+  <label>
+    <input type="checkbox" [checked]="checked" (change)="toggle($event)">
+    <span class="switch" [style.background-color]="checked ? trueColor : falseColor"></span>
+  </label>
+</div>
