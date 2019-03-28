@@ -1,28 +1,40 @@
 # sxy
 The Sxy component library for Angular 7
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+Great design and thoughtful user interactions can be made better collaboratively. Sxy aims to fulfill that idea.
 
-## Development server
+Check back for a new 'raw' HTML5/CSS3 version in the coming months!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Components
+At this time, only the Toggle component is available. 
 
-## Code scaffolding
+### Toggle
+The toggle component is a simple iOS style switch, that emits the checked value back to the implementing component. It is made from pure SCSS and HTML, with the exception of the Angular emitter. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Include it in your Angular 7 application by adding `import { SxyModule } from 'sxy';` before `@NgModule` and `SxyModule` to your `imports:[]` section within your `src\app\app.module.ts` file. 
 
-## Build
+So you should wind up with an app.module.ts file that looks like:
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+import { AppComponent } from './app.component';
+import { SxyModule } from 'sxy';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    SxyModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { } 
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You should then be able to add it to your component with `<sxy-toggle></sxy-toggle>` after doing a simple `import { ToggleComponent } from 'sxy'`.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Enjoy!
