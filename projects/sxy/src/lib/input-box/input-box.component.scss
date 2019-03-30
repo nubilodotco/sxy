@@ -1,0 +1,66 @@
+@keyframes focus {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+* {
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+input {
+    background: transparent;
+    height: 30px;
+    position: absolute;
+    width: 100%;     
+}
+
+input:focus+.underline {
+    transform: scale(1);
+}
+
+.input-box {
+    padding: 6px 10px;
+    position: relative;
+}
+
+.input-box:hover {
+    cursor: pointer;
+}
+
+.underline-placeholder {
+    background-color: rgb(200,200,200);
+    display: inline-block;
+    height: 2px;
+    left: 0px;
+    top: 40px;
+    margin-top: -4px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.underline {
+    display: inline-block;
+    height: 2px;
+    left: 0px;
+    top: 40px;
+    margin-top: -4px;
+    position: absolute;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0);
+    -webkit-transition: all 0.6s cubic-bezier(.87, -.41, .19, 1.44);
+    transition: all 0.6s cubic-bezier(.87, -.41, .19, 1.44);
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s;
+    width: 100%;
+    z-index: 2
+}

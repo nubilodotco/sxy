@@ -24,6 +24,12 @@
       ],
       "sxy/*": [
         "dist/sxy/*"
+      ],
+      "input-box": [
+        "dist/input-box"
+      ],
+      "input-box/*": [
+        "dist/input-box/*"
       ]
     }
   }

@@ -1,0 +1,8 @@
+<div class="input-box" [ngStyle]="{'width': width}">
+  <input [attr.type]="type"        
+        [placeholder]="placeholder"
+        [(ngModel)]="value"
+  #inputBox>
+  <span class="underline" [style.background-color]="colorAccents"></span>
+  <span class="underline-placeholder"></span>
+</div>
